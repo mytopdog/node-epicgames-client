@@ -41,6 +41,10 @@ class Friend extends User {
 
     return false;
   }
+  
+  async sendMessage(contents) {
+    return this.client.communicator.sendMessage(this.id, contents);
+  }
 
 }
 
