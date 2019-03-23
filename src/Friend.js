@@ -45,7 +45,14 @@ class Friend extends User {
   async sendMessage(contents) {
     return this.client.communicator.sendMessage(this.id, contents);
   }
-
+  
+  async message(contents) {
+    return this.sendMessage(contents);
+  }
+  
+  async send(contents) {
+    return this.sendMessage(contents);
+  }
 }
 
 module.exports = Friend;
