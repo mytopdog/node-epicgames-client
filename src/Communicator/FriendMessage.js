@@ -6,6 +6,7 @@ class FriendMessage {
 
     this.communicator = communicator;
     this.friend = new Friend(this.communicator.getClient(), data);
+    this.author = this.friend.id;
 
     this.message = data.message;
     this.time = data.time;
